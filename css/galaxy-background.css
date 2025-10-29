@@ -1,0 +1,51 @@
+/**
+ * Galaxy Background Styles
+ * 
+ * Provides styling for the animated galaxy starfield background
+ * with gradient overlays for depth effect.
+ */
+
+/* Hide scrollbar for cleaner appearance */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Body styling - full viewport with dark background and gradients */
+body {
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  /* Purple and blue radial gradients for depth */
+  background-image: 
+    radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Canvas - fixed position to cover entire viewport */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Optional: Link styling (for attribution) */
+a {
+  position: absolute;
+  bottom: 2vmin;
+  right: 2vmin;
+  color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: red;
+}
